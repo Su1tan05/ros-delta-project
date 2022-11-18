@@ -25,16 +25,13 @@ void DcServo::revolute(float PWM){
         PWM = 1;
         directRevolute(PWM);
         }
-    // If PWM < -1 ---> PWM = 1, counterclockwise rotation
     else if (PWM <= -1){
         PWM = 1;
         inverseRevolute(PWM);
     }
-    // If 0 < PWM < 1 ---> clockwise rotation
     else if (PWM > 0){
         directRevolute(PWM);
     }
-    // If -1 < PWM < 0 ---> counterclockwise rotation
     else{
         PWM = -PWM;
         inverseRevolute(PWM);

@@ -18,10 +18,8 @@ float ki = 0.5;
 float kd = 0;
 float setpoint = 0;
 
-// Поток для получения данных с двигателя
 Ticker motor_info_ticker;
 
-// Создание объекта класса Encoder
 Encoder encoder{ENCA_PIN, ENCB_PIN, REDUCTER_RATIO, ENCODER_IMPULSES, true};
 
 DcServo servo{IN1_PIN, IN2_PIN, PWM_PIN, &encoder};
