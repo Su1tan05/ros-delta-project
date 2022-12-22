@@ -86,7 +86,7 @@ void DcServo:: revoluteMotor(){
 
 void DcServo::initPid(){
     pid.setInputLimits(-360.0, 360.0);
-    pid.setOutputLimits(-1.0, 1.0);
+    pid.setOutputLimits(-12.0, 12.0);
     pid.setBias(0.0);
     pid.setMode(AUTO_MODE);
 }
